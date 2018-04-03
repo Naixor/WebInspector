@@ -1,0 +1,31 @@
+{
+  "name": "web-inspector",
+  "version": "1.0.0",
+  "description": "Web Inspector",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "start-server": "nodemon ./dist/proxy.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Web",
+    "Inspector",
+    "Weinre"
+  ],
+  "author": "@Naixor",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "http-mitm-proxy": "^0.6.0",
+    "ip": "^1.1.5",
+    "node-easy-cert": "^1.2.0",
+    "typescript": "^2.6.2",
+    "weinre": "^2.0.0-pre-I0Z7U9OV"
+  },
+  "devDependencies": {
+    "@types/node": "^9.3.0",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.1"
+  }
+}

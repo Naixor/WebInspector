@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+        "outDir": "./dist",
+		"moduleResolution": "node",
+		"noImplicitAny": false,
+		"removeComments": false,
+		"lib": [
+			"es2017"
+		],
+		"preserveConstEnums": false,
+		"target": "es6",
+		"sourceMap": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata":true,
+		"declaration": false,
+		"diagnostics": true,
+		"noImplicitReturns": true,
+		"baseUrl": "./",
+		"typeRoots": [
+			"./src/typings",
+			"./node_modules/@types"
+		]
+	},
+	"include": [
+		"./global.d.ts",
+		"./src/*.ts"
+	],
+    "exclude": [
+        "./node_modules"
+    ],
+	"files": [
+		"./global.d.ts",
+		"./src/**.ts"
+	]
+}
