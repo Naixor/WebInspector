@@ -1,0 +1,23 @@
+<section class="top">
+    <div class="title">
+        <h1>
+            {{ title }}
+        </h1>
+    </div>
+    <form>
+        <mat-form-field>
+            <input #ruleInput matInput placeholder="检查的url地址，如*">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addProxyRule(ruleInput.value)">添加</button>
+    </form>
+</section>
+<section class="bottom">
+    <mat-list>
+        <mat-list-item class="proxy-rule" *ngFor="let rule of proxyRules; let i = index">
+            <span>{{ rule }}</span>
+            <button mat-icon-button (click)="deleteProxyRule(i)">
+                <mat-icon svgIcon="close"></mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+</section>

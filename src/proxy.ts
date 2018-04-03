@@ -49,7 +49,7 @@ const server = createServer((req, res) => {
         'Content-Type': 'application/x-x509-ca-cert',
         'Content-Disposition': 'attachment; filename="rootCA.crt"'
     });
-    res.end(readFileSync(resolve(__dirname, '../.http-mitm-proxy/certs/ca.pem'))
+    res.end(readFileSync(resolve(__dirname, '../.http-mitm-proxy/certs/ca.pem')));
 });
 
 server.listen(8080)

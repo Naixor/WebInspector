@@ -1,0 +1,39 @@
+@import '~styles.scss';
+
+section {
+    &.top {
+        flex: 1 1 content;
+        .title {
+            text-align: center;
+        }
+        border-bottom: 1px solid gray;
+    }
+    &.bottom {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 0;
+        flex: 1 1 auto;
+    }
+}
+
+.mat-list {
+    .mat-list-item {
+        height: 2em;
+
+        &:nth-child(2n+1) {
+            background: #999;
+        }
+        span {
+            flex: 1 1 auto;
+        }
+        .mat-icon-button {
+            width: 0;
+            flex: 1 1 content;
+            @include md-icon-size(1.2em);
+            .mat-icon {
+                @include md-icon-size(.9em);
+                margin-top: -.3em;
+            }
+        }
+    }
+}

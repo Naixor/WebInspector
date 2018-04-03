@@ -2,11 +2,16 @@
   "name": "web-inspector",
   "version": "1.0.0",
   "description": "Web Inspector",
-  "main": "index.js",
+  "main": "src/proxy.js",
   "scripts": {
-    "dev": "tsc -w",
-    "start-server": "nodemon ./dist/proxy.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npm i && cd ui && npm i",
+    "dev:proxy": "tsc -w",
+    "build:proxy": "tsc",
+    "proxy:start": "nodemon ./dist/proxy/proxy.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:ui": "cd ui && npm run dev",
+    "build:ui": "cd ui && npm run electron:build",
+    "build": "npm run build:ui && npm run build:proxy"
   },
   "keywords": [
     "Web",
